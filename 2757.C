@@ -1,4 +1,12 @@
-//Filipe Siqueira 194644
+/* --------------------------------------------------------------------------
+Disciplina  : Lógica de Programação, turma IB, 194644
+Linguagem   : C
+Plataforma  : https://judge.beecrowd.com/pt/search
+Exercício   : 1013
+Data        : 09/04/2026
+Objetivo    : variáveis inteiras
+Aprendizado : manipular variaveis inteiras.
+-------------------------------------------------------------------------- */
 
 #include<stdio.h>
 
