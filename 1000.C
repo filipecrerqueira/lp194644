@@ -4,8 +4,8 @@ Linguagem   : C
 Plataforma  : https://judge.beecrowd.com/pt/search
 Exercício   : 1000
 Data        : 06/04/2026
-Objetivo    : if else
-Aprendizado : resolver sem formulas especificas, traduzir pseudocodigo.
+Objetivo    : printf
+Aprendizado : como printar texto
 -------------------------------------------------------------------------- */
 
 #include <stdio.h>
