@@ -1,42 +1,51 @@
 /* --------------------------------------------------------------------------
-Disciplina  : LC3gica de Programacao, turma IB, 194644
+Disciplina  : Lógica de Programação, turma IB, 194644
 Linguagem   : C
-Plataforma  : https://judge.beecrowd.com/pt/search1017
-ExercC-cio   : 1017
-Data        : 19/05/2026
-Objetivo    : Fucoes
-Aprendizado : desvendar a lei de formacao e montar a matriz
+Plataforma  : https://judge.beecrowd.com/pt/search
+Exercício   : 1071
+Data        : 17/04/2026
+Objetivo    : Laço for
+Aprendizado : usar o for e condicionais
 -------------------------------------------------------------------------- */
 
-#include <stdio.h>
+#include<stdio.h>
 
-float calcularLitros(int tempo, int velocidade){
+ int main(){
+ 
+ 
+    int X,Y,s,i,maior,menor;
     
-     float distancia = velocidade*tempo;
-     
-     float litros = distancia/12;
-     
-     return litros;
-     
-}
-
-int main(){
+    X=0;
+    Y=0;
+    s=0;
+    scanf("%d %d", &X, &Y);
     
-    int tempo, velocidade;
-    float litros;
+    if (Y<X){
+        menor=Y; 
+        maior=X;
+        
+        
+    } else{
+        menor=X;
+        maior=Y;
+      }
     
-    scanf("%d", &tempo);
-    scanf("%d", &velocidade);
+    for(i=menor;i<maior;i++){
+        if(i%2!=0 && i!=menor){
+            
+         s+=i;
+        }
+        
+    }    
+        
+        
+        
+    printf("%d\n",s);
+        
     
-    litros = calcularLitros(tempo, velocidade);
-    
-    printf("%.3f\n", litros);
     
     
+        return 0;          
+  }
     
     
-
-return 0;        
-    
-
-}
