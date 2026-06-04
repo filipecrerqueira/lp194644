@@ -1,11 +1,11 @@
 /* --------------------------------------------------------------------------
 Disciplina  : LC3gica de Programacao, turma IB, 194644
 Linguagem   : C
-Plataforma  : https://judge.beecrowd.com/pt/search1441
-ExercC-cio   : 1441
+Plataforma  : https://judge.beecrowd.com/pt/search1169
+ExercC-cio   : 1169
 Data        : 04/06/2026
-Objetivo    : Fucoes recursivas, e sequencias
-Aprendizado : escrever a lei da funcao fazer ela se chamrar 
+Objetivo    : Fucoes recursivas, e numeros astronomicos
+Aprendizado : escrever a lei da funcao fazer ela se chamrar, fazer uma divisao truncada e declarar coisas muito grandes. 
 -------------------------------------------------------------------------- */
 #include <stdio.h>
 
