@@ -10,69 +10,55 @@ Aprendizado : montar uma matriz
 
 #include <stdio.h>
 
-int main (){
+int main()
+{
 
     int ordem;
 
-    int matriz[ordem][ordem];
+    while (scanf("%d", &ordem) != 0 && ordem != 0)
 
-   
-    
-
-    while (scanf("%d", &ordem) != 0)
     {
+        int matriz[ordem][ordem];
 
-     int inicio = 0;
-     int fim = ordem;
-
+        int inicio = 0;
+        int fim = ordem;
 
         for (int i = 0; i < ordem; i++)
         {
             for (int j = 0; j < ordem; j++)
             {
-                matriz[i][j]= 0;
+                matriz[i][j] = 0;
             }
-            
         }
-        
- 
-        while(fim > ordem/2){
+
+        while (inicio < fim)
+        {
 
             for (int i = inicio; i < fim; i++)
             {
                 for (int j = inicio; j < fim; j++)
                 {
-                    
-                
-                    matriz[i][j]+=1;
-                    
 
-
-
+                    matriz[i][j] += 1;
                 }
-                
             }
-            inicio ++;
-            fim --;
-     
+            inicio++;
+            fim--;
         }
-       
+
         for (int i = 0; i < ordem; i++)
-        {   for (int z = 0; z < ordem; z++)
-
-
+        {
+            for (int j = 0; j < ordem; j++)
             {
+                if (j > 0)
+                    printf(" ");
                 printf("%d", matriz[i][j]);
             }
-        
             printf("\n");
         }
-        
 
+        printf("\n");
+    }
 
-    
-
-}
-
-return 0;
+    return 0;
 }
