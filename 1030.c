@@ -9,13 +9,14 @@ Aprendizado : logica circular de vetores
 -------------------------------------------------------------------------- */
 #include <stdio.h>
 
-int main(){
+int main()
+{
 
     int casos;
 
-    scanf("%d", casos);
+    scanf("%d", &casos);
 
-    for (size_t i = 0; i < casos; i++)
+    for (int i = 0; i < casos; i++)
     {
 
         int n;
@@ -25,22 +26,50 @@ int main(){
         int pessoas[n];
 
         int pulos;
-        
+
         scanf("%d", &pulos);
 
-        for (size_t i = 0; i < pessoas; i++)
+        for (size_t j = 0; j < n; j++)
         {
-            pessoas[i] = 1;
+            pessoas[j] = 1;
         }
-    
-        for (size_t i = 0; i < pessoas; i++)
+
+        int pessoasvivas = n;
+        int posicaoatual = -1;
+
+        while (pessoasvivas > 1)
         {
-            int pulo=()
+
+            int passosdados = 0;
+
+            while (passosdados < pulos)
+            {
+
+                posicaoatual = (posicaoatual + 1) % n;
+
+                if (pessoas[posicaoatual] == 1)
+                {
+                    passosdados++;
+                }
+            }
+
+            pessoas[posicaoatual] = 0;
+            pessoasvivas--;
         }
-        
-        
 
+        int Y = 0;
 
+        for (size_t z = 0; z < n; z++)
+        {
+            if (pessoas[z] == 1)
+            {
+
+                Y = z + 1;
+            }
+        }
+
+        printf("Case %d: %d\n", i+1, Y);
     }
 
+    return 0;
 }
