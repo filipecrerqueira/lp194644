@@ -100,7 +100,7 @@ int main()
     int linha_inicio, coluna_inicio;
     FILE *arquivo;
 
-   arquivo = fopen("C:\\Users\\Filipe Cerqueira\\Documents\\Codigos Beecrowd\\input2.txt", "r");
+    arquivo = fopen("C:\\Users\\Filipe Cerqueira\\Documents\\Codigos Beecrowd\\Sudoku\\input2.txt", "r");
 
     if (arquivo == NULL)
 
@@ -132,12 +132,24 @@ int main()
 
     while (jogo_ativo == 1)
     {
-        system("cls");
 
         for (int i = 0; i < 9; i++)
         {
+            // A cada 3 linhas, imprime uma linha divisória horizontal
+            if (i > 0 && i % 3 == 0)
+            {
+                printf("------+-------+------\n");
+            }
+
             for (int j = 0; j < 9; j++)
             {
+                // A cada 3 colunas, imprime uma barra vertical
+                if (j > 0 && j % 3 == 0)
+                {
+                    printf("| ");
+                }
+
+                // Imprime o número da matriz diretamente, mantendo os zeros (0)
                 printf("%d ", sudoku[i][j]);
             }
             printf("\n");
@@ -163,7 +175,7 @@ int main()
         {
 
             printf("Palpite invalido, favor escolher linha (1-9), coluna (1-9) e palpite de (1-9).\n Pressione ENTER para continuar...");
-            fflush(stdin);
+
             getchar();
             continue;
         }
@@ -171,7 +183,7 @@ int main()
         if (sudoku[linha][coluna] != 0)
         {
             printf("Posição invalida favor escolher algum 0 para substituir.\nPressione ENTER para continuar...");
-            fflush(stdin);
+
             getchar();
             continue;
         }
@@ -215,9 +227,8 @@ int main()
             sudoku[linha][coluna] = 0;
         }
 
-        printf("Pressione ENTER para continuar...");
-
-        fflush(stdin);
+        system("pause");
+        system("cls");
         getchar();
 
         int zeros_restantes = 0;
@@ -238,8 +249,17 @@ int main()
 
             for (int i = 0; i < 9; i++)
             {
+                if (i > 0 && i % 3 == 0)
+                {
+                    printf("------+-------+------\n");
+                }
+
                 for (int j = 0; j < 9; j++)
                 {
+                    if (j > 0 && j % 3 == 0)
+                    {
+                        printf("| ");
+                    }
                     printf("%d ", sudoku[i][j]);
                 }
                 printf("\n");
@@ -248,7 +268,7 @@ int main()
             printf("\n=============================================\n");
             printf("PARABENS! Voce completou o Sudoku com sucesso!\n");
             printf("=============================================\n");
-
+            system("pause");
             jogo_ativo = 0;
         }
     }
