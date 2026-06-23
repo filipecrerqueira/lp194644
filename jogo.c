@@ -187,6 +187,7 @@ int main()
             printf("Palpite invalido, favor escolher linha (1-9), coluna (1-9) e palpite de (1-9).\n Pressione ENTER para continuar...");
 
             getchar();
+            printf("\n");
             continue;
         }
 
@@ -195,6 +196,7 @@ int main()
             printf("Posição invalida favor escolher algum 0 para substituir.\nPressione ENTER para continuar...");
 
             getchar();
+            printf("\n");
             continue;
         }
 
@@ -278,6 +280,7 @@ int main()
             printf("PARABENS! Voce completou o Sudoku com sucesso!\n");
             printf("=============================================\n");
             getchar();
+            printf("\n");
             jogo_ativo = 0;
         }
     }
