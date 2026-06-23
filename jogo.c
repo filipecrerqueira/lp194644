@@ -1,3 +1,13 @@
+/* --------------------------------------------------------------------------
+Disciplina  : LC3gica de ProgramaC'C#o, turma IB, 194644
+Linguagem   : C
+Plataforma  : https://judge.beecrowd.com/pt/search
+ExercC-cio   : jogo
+Data        : 23/06/2026
+Objetivo    : jogo interativo
+Aprendizado : abrir arquivos e alterar dados
+-------------------------------------------------------------------------- */
+
 #include <stdio.h>
 #include <stdlib.h>
 
