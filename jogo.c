@@ -110,7 +110,7 @@ int main()
     int linha_inicio, coluna_inicio;
     FILE *arquivo;
 
-    arquivo = fopen("C:\\Users\\Filipe Cerqueira\\Documents\\Codigos Beecrowd\\Sudoku\\input2.txt", "r");
+    arquivo = fopen("input2.txt", "r");
 
     if (arquivo == NULL)
 
@@ -237,9 +237,9 @@ int main()
             sudoku[linha][coluna] = 0;
         }
 
-        system("pause");
-        system("cls");
+
         getchar();
+        printf("\n");
 
         int zeros_restantes = 0;
 
@@ -255,8 +255,7 @@ int main()
         }
         if (zeros_restantes == 0)
         {
-            system("cls");
-
+           
             for (int i = 0; i < 9; i++)
             {
                 if (i > 0 && i % 3 == 0)
@@ -278,7 +277,7 @@ int main()
             printf("\n=============================================\n");
             printf("PARABENS! Voce completou o Sudoku com sucesso!\n");
             printf("=============================================\n");
-            system("pause");
+            getchar();
             jogo_ativo = 0;
         }
     }
